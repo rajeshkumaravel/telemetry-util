@@ -8,7 +8,7 @@
  * @description : Configuration constants
  */
 const CONFIG = {
-  TELEMETRY_URL: null,
+  TELEMETRY_URL: 'https://devcon.sunbirded.org/content/data/v1/telemetry',
   METHOD: ['POST', 'PUT']
 };
 
