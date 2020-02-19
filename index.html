@@ -1,0 +1,19 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="devconTelemetry.js" charset="utf-8"></script>
+
+
+
+<script>
+  console.log('Calling event');
+  setTimeout(() => {
+    console.log('Called');
+    var e = new CustomEvent('devcon:telemetry:send', {
+      detail: {
+        data: { 'a': 'b' },
+        method: 'PUT'
+      }
+    });
+    window.dispatchEvent(e);
+  }, 2000);
+</script>
